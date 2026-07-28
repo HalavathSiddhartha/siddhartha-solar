@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Book a Free Consultation | Suryaya</title>
+<meta name="description" content="Book a free 20-minute solar consultation, or reach Suryaya by phone, WhatsApp or email.">
+<link rel="canonical" href="https://www.suryaya.in/contact.html">
+<link rel="icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+<div class="page-loader"><div class="loader-sun"></div></div>
+<header id="site-nav" class="nav"></header>
+
+<main>
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+      <h1>Book a Free Consultation</h1>
+      <p style="max-width:56ch;">Tell us a little about your property and preferred time. We'll confirm by phone or WhatsApp — no obligation, ever.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container calc-layout">
+      <form class="card" id="booking-form" onsubmit="event.preventDefault(); this.querySelector('.form-success').style.display='block';">
+        <h3>Consultation details</h3>
+        <div class="field-row">
+          <div class="field"><label for="c-name">Full name</label><input type="text" id="c-name" required></div>
+          <div class="field"><label for="c-phone">Phone number</label><input type="tel" id="c-phone" required></div>
+        </div>
+        <div class="field"><label for="c-email">Email</label><input type="email" id="c-email"></div>
+        <div class="field-row">
+          <div class="field">
+            <label for="c-property">Property type</label>
+            <select id="c-property">
+              <option>Home</option>
+              <option>Farm</option>
+              <option>Business</option>
+            </select>
+          </div>
+          <div class="field"><label for="c-location">Location (city/district)</label><input type="text" id="c-location"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="c-date">Preferred date</label><input type="date" id="c-date"></div>
+          <div class="field"><label for="c-time">Preferred time</label><input type="time" id="c-time"></div>
+        </div>
+        <div class="field"><label for="c-message">Anything else we should know?</label><textarea id="c-message" rows="4"></textarea></div>
+        <button type="submit" class="btn btn-sun btn-block">Request Consultation</button>
+        <p class="form-success" style="display:none;color:var(--growth-deep);font-weight:600;margin-top:14px;">Thanks — we'll confirm your slot by phone or WhatsApp shortly.</p>
+      </form>
+
+      <div>
+        <div class="card">
+          <h3>Prefer to reach out directly?</h3>
+          <div class="flex gap-16" style="flex-wrap:wrap;margin-top:16px;">
+            <a class="btn btn-sun" data-href="tel" href="#">📞 Call <span data-fill="phone"></span></a>
+            <a class="btn btn-outline" href="#" target="_blank" rel="noopener" id="wa-cta">💬 WhatsApp</a>
+          </div>
+          <ul style="margin-top:24px;">
+            <li><strong>Email:</strong> <a data-href="mailto" href="#" data-fill="email"></a></li>
+            <li><strong>Address:</strong> <span data-fill="address"></span></li>
+          </ul>
+        </div>
+        <div class="card" style="margin-top:20px;padding:0;overflow:hidden;">
+          <iframe data-href="map" src="" width="100%" height="280" style="border:0;display:block;" loading="lazy" title="Map"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="footer"></footer>
+<script src="config/config.js"></script>
+<script src="js/script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const wa = document.getElementById("wa-cta");
+    if (wa && window.SITE_CONFIG) {
+      wa.href = `https://wa.me/${SITE_CONFIG.contact.whatsapp}?text=${encodeURIComponent("Hi, I'd like to book a free solar consultation.")}`;
+    }
+  });
+</script>
+</body>
+</html>

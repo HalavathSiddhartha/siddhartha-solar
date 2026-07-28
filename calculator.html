@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Energy Calculator — Estimate Your Savings | Suryaya</title>
+<meta name="description" content="Enter your monthly electricity bill and get an instant estimate of solar capacity, cost, subsidy and 25-year savings — free, no sign-up.">
+<link rel="canonical" href="https://www.suryaya.in/calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Solar Energy Calculator | Suryaya">
+<meta property="og:description" content="Instant, independent solar savings estimate for your home, farm or business.">
+<link rel="icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="calculator">
+<div class="page-loader"><div class="loader-sun"></div></div>
+<header id="site-nav" class="nav"></header>
+
+<main>
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Energy Calculator</div>
+      <h1>Energy Calculator</h1>
+      <p style="max-width:56ch;">Enter your details below. Every number updates live — nothing is submitted anywhere.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container calc-layout">
+      <form id="energy-calc-form" class="card">
+        <h3>Your details</h3>
+        <div class="field">
+          <label for="bill">Average monthly electricity bill (₹)</label>
+          <input type="number" id="bill" name="bill" value="3500" min="200" step="100" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="state">State</label>
+            <select id="state" name="state">
+              <option>Telangana</option>
+              <option>Andhra Pradesh</option>
+              <option>Maharashtra</option>
+              <option>Gujarat</option>
+              <option>Karnataka</option>
+              <option>Tamil Nadu</option>
+              <option>Rajasthan</option>
+              <option>Punjab</option>
+              <option>Delhi</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="custType">Customer type</label>
+            <select id="custType" name="custType">
+              <option value="residential">Homeowner</option>
+              <option value="farm">Farmer</option>
+              <option value="commercial">Business</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="roofType">Roof / installation type</label>
+          <select id="roofType" name="roofType">
+            <option value="rcc">RCC rooftop</option>
+            <option value="tin">Tin / sheet roof</option>
+            <option value="ground">Ground-mounted (farm/open land)</option>
+          </select>
+        </div>
+        <p style="font-size:.8rem;">Estimates use state-average tariffs and standard generation assumptions. A free site visit refines the final numbers.</p>
+        <button type="button" id="send-to-report" class="btn btn-sun btn-block">Generate Full Savings Report</button>
+      </form>
+
+      <div>
+        <h3 style="margin-bottom:20px;">Your estimate</h3>
+        <div class="result-grid">
+          <div class="result-card highlight"><div class="label">Estimated solar capacity</div><div class="value" id="out-capacity">—</div></div>
+          <div class="result-card highlight"><div class="label">Estimated annual savings</div><div class="value" id="out-annual-savings">—</div></div>
+          <div class="result-card"><div class="label">Estimated monthly savings</div><div class="value" id="out-monthly-savings">—</div></div>
+          <div class="result-card"><div class="label">Estimated installation cost</div><div class="value" id="out-install-cost">—</div></div>
+          <div class="result-card"><div class="label">Estimated govt. subsidy</div><div class="value" id="out-subsidy">—</div></div>
+          <div class="result-card"><div class="label">25-year savings</div><div class="value" id="out-lifetime-savings">—</div></div>
+          <div class="result-card" style="grid-column:1/-1;"><div class="label">Carbon reduction over 25 years</div><div class="value" id="out-co2">—</div></div>
+        </div>
+        <div class="card" style="margin-top:24px;">
+          <h3>What happens next?</h3>
+          <p>Click "Generate Full Savings Report" for a printable, shareable summary — or book a free 20-minute call to talk through the numbers with an advisor.</p>
+          <a href="contact.html" class="btn btn-outline btn-block">Book Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="footer"></footer>
+<script src="config/config.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

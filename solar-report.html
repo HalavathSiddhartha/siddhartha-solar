@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Solar Savings Report | Suryaya</title>
+<meta name="description" content="A personalised, printable solar savings report — capacity, cost, subsidy and 25-year savings estimate.">
+<link rel="canonical" href="https://www.suryaya.in/solar-report.html">
+<link rel="icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="solar-report">
+<div class="page-loader"><div class="loader-sun"></div></div>
+<header id="site-nav" class="nav no-print"></header>
+
+<main>
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb no-print"><a href="index.html">Home</a> / Solar Savings Report</div>
+      <h1>Your Solar Savings Report</h1>
+      <p style="max-width:56ch;">Generated from your Energy Calculator inputs. Print or save as PDF to share with an installer.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div id="report-empty" class="card text-center">
+        <h3>No calculator results found yet</h3>
+        <p>Run the Energy Calculator first — your report will appear here automatically.</p>
+        <a href="calculator.html" class="btn btn-sun">Go to Energy Calculator</a>
+      </div>
+
+      <div id="report-results"></div>
+
+      <div class="card no-print" style="margin-top:32px;">
+        <h3>Add your recommendation notes</h3>
+        <p style="font-size:.85rem;">Placeholder — this section will show AI-generated system recommendations and installer-matching once that feature is live.</p>
+        <div class="card-solid" style="padding:20px;border-style:dashed;">
+          <p class="mb-0">🔮 AI-generated recommendation panel — coming soon.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-16 no-print" style="margin-top:28px;flex-wrap:wrap;">
+        <button class="btn btn-outline" onclick="window.print()">Print / Save as PDF</button>
+        <a href="contact.html" class="btn btn-sun">Book Free Consultation</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="footer no-print"></footer>
+<script src="config/config.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

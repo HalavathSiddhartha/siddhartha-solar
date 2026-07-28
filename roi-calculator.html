@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar ROI Calculator — Payback Period &amp; Lifetime Savings | Suryaya</title>
+<meta name="description" content="Estimate solar payback period, 25-year lifetime savings and annual ROI based on system size, installation cost and expected generation.">
+<link rel="canonical" href="https://www.suryaya.in/roi-calculator.html">
+<link rel="icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="roi-calculator">
+<div class="page-loader"><div class="loader-sun"></div></div>
+<header id="site-nav" class="nav"></header>
+
+<main>
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / ROI Calculator</div>
+      <h1>ROI Calculator</h1>
+      <p style="max-width:56ch;">Already have a quote? Plug in the numbers to check the payback period and lifetime return.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container calc-layout">
+      <form id="roi-calc-form" class="card">
+        <h3>System &amp; quote details</h3>
+        <div class="field">
+          <label for="roi-bill">Average monthly electricity bill (₹)</label>
+          <input type="number" id="roi-bill" name="bill" value="3500" min="0" step="100">
+        </div>
+        <div class="field">
+          <label for="roi-size">System size (kW)</label>
+          <input type="number" id="roi-size" name="size" value="4" min="0.5" step="0.5" required>
+        </div>
+        <div class="field">
+          <label for="roi-cost">Total installation cost (₹)</label>
+          <input type="number" id="roi-cost" name="cost" value="220000" min="1000" step="1000" required>
+        </div>
+        <div class="field">
+          <label for="roi-subsidy">Government subsidy (₹)</label>
+          <input type="number" id="roi-subsidy" name="subsidy" value="60000" min="0" step="1000">
+        </div>
+        <div class="field">
+          <label for="roi-generation">Expected annual generation per kW (units)</label>
+          <input type="number" id="roi-generation" name="generation" value="1460" min="500" step="10">
+          <p style="font-size:.78rem;margin-top:6px;">Default assumes ~4 units/kW/day, typical for most of India.</p>
+        </div>
+      </form>
+
+      <div>
+        <h3 style="margin-bottom:20px;">Your return</h3>
+        <div class="result-grid">
+          <div class="result-card highlight"><div class="label">Payback period</div><div class="value" id="roi-payback">—</div></div>
+          <div class="result-card highlight"><div class="label">Annual ROI</div><div class="value" id="roi-annual">—</div></div>
+          <div class="result-card" style="grid-column:1/-1;"><div class="label">Lifetime savings (25 years, net of cost)</div><div class="value" id="roi-lifetime">—</div></div>
+        </div>
+        <div class="card" style="margin-top:24px;">
+          <h3>Reading these numbers</h3>
+          <p>Payback period is how long it takes for your savings to cover the net installation cost. Most well-sized residential systems in India pay back in 3.5–5.5 years, with 20+ years of savings after that.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="footer"></footer>
+<script src="config/config.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
